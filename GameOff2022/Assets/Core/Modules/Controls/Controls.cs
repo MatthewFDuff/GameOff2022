@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Core.Scripts
+namespace Core.Modules.Controls
 {
     [CreateAssetMenu(fileName = "Controls", menuName = "Scriptables/Controls", order = 0)]
     public class Controls : ScriptableObject

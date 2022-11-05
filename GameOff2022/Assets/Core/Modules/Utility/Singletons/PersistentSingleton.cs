@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Core.Scripts.Utility.Singletons
+namespace Core.Modules.Utility.Singletons
 {
     /// <summary>
     /// A singleton that does not get destroyed when the scene changes.

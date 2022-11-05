@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Core.Scripts.Utility.Singletons
+namespace Core.Modules.Utility.Singletons
 {
     /// <summary>
     /// Singleton pattern.
