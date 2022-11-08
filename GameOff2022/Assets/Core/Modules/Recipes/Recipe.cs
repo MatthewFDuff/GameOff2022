@@ -7,5 +7,9 @@ namespace Core.Modules.Recipes
     public class Recipe : ScriptableObject
     {
         [SerializeField] Ingredient[] ingredients;
+        [SerializeField] Enemy[] enemies;
+
+        public Enemy[] GetEnemies() => enemies;
+        public Ingredient[] GetIngredients() => ingredients;
     }
 }

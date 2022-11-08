@@ -1,4 +1,7 @@
-﻿using Core.Modules.Recipes;
+﻿using System.Collections.Generic;
+using Core.Modules.Recipes;
+using Core.Modules.Utility;
+using Core.Scripts;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,16 +10,13 @@ namespace Core.Modules.Battle
     public class BattleManager : MonoBehaviour
     {
         [SerializeField] bool startBattleOnStart;
-
-        public Recipe currentRecipe => currentRecipeWavePair.GetRecipe();
+        [SerializeField] Transform[] enemySpawnLocations;
         
-        public UnityEvent<Recipe> recipeChanged;
         public UnityEvent<float> timerTick;
+        public UnityEvent<Recipe> recipeAdded;
 
+        List<Recipe> activeRecipes;
         int recipesCompleted = 0;
-        int wavesCompleted = 0;
-        
-        RecipeWavesPair currentRecipeWavePair;
         Level currentLevel;
         Timer levelTimer;
 
@@ -25,39 +25,43 @@ namespace Core.Modules.Battle
             if(startBattleOnStart) StartBattle();
         }
 
+        public void SetLevel(Level newLevel) => currentLevel = newLevel;
+
         public void StartBattle()
         {
             recipesCompleted = 0;
-            wavesCompleted = 0;
-            
-            SetNextRecipe();
+
             StartLevelTimer();
-            SpawnNextWave();
         }
         
         public void StopBattle()
         {
             // Don't know the logic for this quite yet
         }
-
-        public void SpawnNextWave()
+        
+        public void AddRecipe(Recipe recipe)
         {
-            var wave = currentLevel.GetWave(recipesCompleted, wavesCompleted);
-            foreach (var enemy in wave.EnemiesInWave)
+            activeRecipes.Add(recipe);
+            SpawnRecipe(recipe);
+        }
+
+        public void SpawnRecipe(Recipe recipe)
+        {
+            var bucketOfSpawns = new Bucket<Transform>(new List<Transform>(enemySpawnLocations));
+            foreach (var enemy in recipe.GetEnemies())
             {
-                // Get spawn point and instantiate enemy there
+                SpawnEnemyAt(enemy, bucketOfSpawns.GetItem());
             }
         }
 
-        void SetNextRecipe()
+        static void SpawnEnemyAt(Enemy enemy, Transform spawnPoint)
         {
-            currentRecipeWavePair = currentLevel.GetNextRecipeWave();
-            recipeChanged?.Invoke(currentRecipeWavePair.GetRecipe());
+            Instantiate(enemy.EnemyPrefab, spawnPoint.position, Quaternion.identity);
         }
 
         void StartLevelTimer()
         {
-            levelTimer = new Timer(this, currentLevel.GetLevelDuration(), 0.1f);
+            levelTimer = new Timer(this, currentLevel.GetDuration(), 0.1f);
             levelTimer.OnCompleted += StopBattle;
             levelTimer.OnTick += (elapsedTime) => timerTick?.Invoke(elapsedTime);
             levelTimer.Start();
