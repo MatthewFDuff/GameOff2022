@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6507ceb82e174adbb9b93f10fc9938ab, type: 3}
   m_Name: newIngredient
   m_EditorClassIdentifier: 
-  levelDuration: 0
-  recipeWaves: []
+  durationInSeconds: 0
+  customers: []
