@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Core.Modules.Recipes;
 using Core.Modules.Utility;
 using Core.Scripts;
@@ -16,13 +17,26 @@ namespace Core.Modules.Battle
         public UnityEvent<Recipe> recipeAdded;
 
         List<Recipe> activeRecipes;
+        List<Ingredient> collectedIngredients;
         int recipesCompleted = 0;
         Level currentLevel;
         Timer levelTimer;
 
+        void Awake()
+        {
+            activeRecipes = new List<Recipe>();
+            collectedIngredients = new List<Ingredient>();
+        }
+
         void Start()
         {
-            if(startBattleOnStart) StartBattle();
+            if (!startBattleOnStart) return;
+            if (currentLevel is null)
+            {
+                Debug.LogWarning("No Level set", this);
+                return;
+            }
+            StartBattle();
         }
 
         public void SetLevel(Level newLevel) => currentLevel = newLevel;
@@ -43,6 +57,7 @@ namespace Core.Modules.Battle
         {
             activeRecipes.Add(recipe);
             SpawnRecipe(recipe);
+            recipeAdded?.Invoke(recipe);
         }
 
         public void SpawnRecipe(Recipe recipe)
@@ -52,6 +67,32 @@ namespace Core.Modules.Battle
             {
                 SpawnEnemyAt(enemy, bucketOfSpawns.GetItem());
             }
+        }
+
+        public void AddIngredient(Ingredient ingredient)
+        {
+            collectedIngredients.Add(ingredient);
+
+            var currentRecipe = activeRecipes[0];
+            if (currentRecipe is null || !currentRecipe.CanCompleteRecipe(collectedIngredients)) return;
+
+            CompleteRecipe(currentRecipe);
+        }
+
+        void CompleteRecipe(Recipe recipeToComplete)
+        {
+            if (!activeRecipes.Contains(recipeToComplete)) return;
+            activeRecipes.Remove(recipeToComplete);
+
+            foreach (var ingredient in recipeToComplete.GetIngredients())
+            {
+                if (!collectedIngredients.Remove(ingredient))
+                {
+                    Debug.LogWarning("Failed to remove ingredient when completing recipe");
+                }
+            }
+
+            recipesCompleted++;
         }
 
         static void SpawnEnemyAt(Enemy enemy, Transform spawnPoint)
