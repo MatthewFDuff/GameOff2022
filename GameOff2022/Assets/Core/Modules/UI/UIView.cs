@@ -11,6 +11,7 @@ namespace Core.Modules.UI
         /// </summary>
         protected bool IsInitialized { get; set; }
 
+        [Header("View Configuration")]
         [SerializeField] public Canvas canvas;
         [SerializeField] internal bool isPersistent;
         [SerializeField] private bool isActiveAtStart;
