@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
+
 namespace Core.Modules.Controls.PlayerStateMachine
 {
     // Anything we want the player statemachine to have access to should go here.
@@ -11,5 +12,6 @@ namespace Core.Modules.Controls.PlayerStateMachine
         public float Speed;
         public Controls controls;
         public MovementState MovementState = new MovementState();
+        
     }
 }
