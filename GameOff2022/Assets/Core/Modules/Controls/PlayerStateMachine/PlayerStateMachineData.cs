@@ -8,9 +8,13 @@ namespace Core.Modules.Controls.PlayerStateMachine
     [Serializable]
     public class PlayerStateMachineData
     {
+        [Header("References")]
         public Transform transform;
-        public float Speed;
         public Controls controls;
+        [Header("Knobs")]
+        public float Speed;
+
+        public PlayerHealthScript health;
         public MovementState MovementState = new MovementState();
         
     }

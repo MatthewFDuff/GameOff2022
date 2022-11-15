@@ -1,5 +1,6 @@
 ﻿using System;
 using Core.Modules.Controls.PlayerStateMachine;
+using Core.Scripts;
 using UnityEngine;
 
 namespace Core.Modules.Controls
@@ -17,7 +18,7 @@ namespace Core.Modules.Controls
 
         public void Update()
         {
-            stateMachine.CurrentState.OnUpdate();
+            stateMachine.CurrentState.OnUpdate(data);
         }
     }
 }

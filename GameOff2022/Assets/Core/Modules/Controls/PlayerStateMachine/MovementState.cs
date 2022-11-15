@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Core.Scripts;
+using UnityEngine;
 
 namespace Core.Modules.Controls.PlayerStateMachine
 {

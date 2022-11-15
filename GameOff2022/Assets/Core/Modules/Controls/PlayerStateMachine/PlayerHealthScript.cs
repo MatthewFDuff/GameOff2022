@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+using Core.Scripts;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayerHealthScript : MonoBehaviour
+public class PlayerHealthScript : MonoBehaviour, IDamageable
 {
 
     public int PlayerMaxHealth = 100;
     public int PlayerCurrentHealth;
 
     public PlayerHealthBar healthBar;
-   
-
+    
     public void Start()
     {
         PlayerCurrentHealth = PlayerMaxHealth;
@@ -31,13 +28,16 @@ public class PlayerHealthScript : MonoBehaviour
         //slider.maxValue = health;
        // slider.value = health;
     }
-
     
-
-    void TakeDamage(int damage)
+     void TakeDamage(int damage)
     {
         PlayerCurrentHealth -= damage;
 
         healthBar.SetHealth(PlayerCurrentHealth);
+    }
+
+    public void Damage(int amount)
+    {
+        TakeDamage(amount);
     }
 }
