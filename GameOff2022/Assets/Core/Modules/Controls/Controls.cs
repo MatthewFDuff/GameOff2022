@@ -6,17 +6,20 @@ namespace Core.Modules.Controls
     public class Controls : ScriptableObject
     {
         // As we create controls, assign them here with a default.
-        public KeyCode attack;
+        public KeyCode lightAttack;
+        public KeyCode heavyAttack;
 
         public void Save()
         {
-            PlayerPrefs.GetInt("attack", (int) attack);
+            PlayerPrefs.GetInt("lightAttack", (int) lightAttack);
+            PlayerPrefs.GetInt("heavyAttack", (int) heavyAttack);
             PlayerPrefs.Save();
         }
 
         public void Load()
         {
-            attack = (KeyCode) PlayerPrefs.GetInt("attack", (int) attack);
+            lightAttack = (KeyCode) PlayerPrefs.GetInt("lightAttack", (int) lightAttack);
+            heavyAttack = (KeyCode) PlayerPrefs.GetInt("heavyAttack", (int) heavyAttack);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Core.Modules.Controls.PlayerStateMachine
         public float Speed;
 
         public PlayerHealthScript health;
-        public MovementState MovementState = new MovementState();
+        public DefaultState DefaultState = new DefaultState();
         
     }
 }

@@ -13,7 +13,7 @@ namespace Core.Modules.Controls
 
         void Awake()
         {
-            stateMachine = new PlayerStateMachine.PlayerStateMachine(data, data.MovementState);
+            stateMachine = new PlayerStateMachine.PlayerStateMachine(data, data.DefaultState);
         }
 
         public void Update()
