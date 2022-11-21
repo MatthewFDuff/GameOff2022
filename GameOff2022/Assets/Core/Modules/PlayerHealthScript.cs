@@ -15,14 +15,6 @@ public class PlayerHealthScript : MonoBehaviour, IDamageable
         healthBar.SetMaxHealth(PlayerMaxHealth);
     }
 
-    void Update()
-    {
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
-    }
-
     public void SetMaxHealth(int health)
     {
         //slider.maxValue = health;

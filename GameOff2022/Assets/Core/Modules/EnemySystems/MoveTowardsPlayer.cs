@@ -33,7 +33,7 @@ namespace Core.Scripts
         void MoveTowards(Vector3 pointToMoveTowards)
         {
             var direction = (pointToMoveTowards - transform.position).normalized;
-            rb.MovePosition(transform.position + (direction * speed * Time.deltaTime));  
+            rb.MovePosition(transform.position + (direction * speed * Time.fixedDeltaTime));  
         }
     }
 }
