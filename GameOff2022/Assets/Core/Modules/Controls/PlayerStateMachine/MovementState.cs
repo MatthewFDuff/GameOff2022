@@ -5,6 +5,8 @@ namespace Core.Modules.Controls.PlayerStateMachine
 {
     public class MovementState : PlayerState
     {
+        private static readonly int IsWalking = Animator.StringToHash("IsWalking");
+
         public override void OnUpdate(PlayerStateMachineData data = null)
         {
             if (data is null)
@@ -19,6 +21,8 @@ namespace Core.Modules.Controls.PlayerStateMachine
             var movementVec = new Vector3(horizontalMovement, verticalMovement, 0);
             if (movementVec.magnitude > 1) movementVec = movementVec.normalized;
 
+            data.playerAnimator.SetBool(IsWalking, movementVec.magnitude > 0);
+            
             data.transform.position += movementVec * effectiveSpeed;
         }
     }

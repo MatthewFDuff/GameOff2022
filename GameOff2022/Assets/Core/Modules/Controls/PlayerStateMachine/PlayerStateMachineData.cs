@@ -12,6 +12,7 @@ namespace Core.Modules.Controls.PlayerStateMachine
         public Transform transform;
         public Controls controls;
         public PlayerStateMachine machine;
+        public Animator playerAnimator;
         [Header("Knobs")]
         public float Speed;
 
