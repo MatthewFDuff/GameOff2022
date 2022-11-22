@@ -12,7 +12,10 @@ namespace Core.Modules.Controls.PlayerStateMachine
         public Transform transform;
         public Controls controls;
         public PlayerStateMachine machine;
-        public Animator playerAnimator;
+        [SerializeField] Animator playerAnimator;
+
+        public Animator PlayerAnimator => playerAnimator != null ? playerAnimator : null;
+
         [Header("Knobs")]
         public float Speed;
 

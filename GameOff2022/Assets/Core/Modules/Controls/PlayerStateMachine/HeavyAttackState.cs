@@ -10,14 +10,14 @@ namespace Core.Modules.Controls.PlayerStateMachine
         {
             base.OnStateEnter(data);
             
-            data?.playerAnimator.SetBool(IsPunching, true);
+            data?.PlayerAnimator?.SetBool(IsPunching, true);
         }
 
         public override void OnStateExit(PlayerStateMachineData data = null)
         {
             base.OnStateExit(data);
             
-            data?.playerAnimator.SetBool(IsPunching, false);
+            data?.PlayerAnimator?.SetBool(IsPunching, false);
         }
     }
 }

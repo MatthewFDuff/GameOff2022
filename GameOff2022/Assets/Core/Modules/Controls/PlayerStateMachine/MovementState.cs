@@ -1,5 +1,4 @@
-﻿using Core.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Core.Modules.Controls.PlayerStateMachine
 {
@@ -21,7 +20,9 @@ namespace Core.Modules.Controls.PlayerStateMachine
             var movementVec = new Vector3(horizontalMovement, verticalMovement, 0);
             if (movementVec.magnitude > 1) movementVec = movementVec.normalized;
 
-            data.playerAnimator.SetBool(IsWalking, movementVec.magnitude > 0);
+
+            data.PlayerAnimator?.SetBool(IsWalking, movementVec.magnitude > 0);
+            
             
             data.transform.position += movementVec * effectiveSpeed;
         }

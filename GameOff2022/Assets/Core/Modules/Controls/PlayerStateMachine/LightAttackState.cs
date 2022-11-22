@@ -9,13 +9,13 @@ namespace Core.Modules.Controls.PlayerStateMachine
         public override void OnStateEnter(PlayerStateMachineData data = null)
         {
             base.OnStateEnter(data);
-            data?.playerAnimator.SetBool(IsJabbing, true);
+            data?.PlayerAnimator?.SetBool(IsJabbing, true);
         }
 
         public override void OnStateExit(PlayerStateMachineData data = null)
         {
             base.OnStateExit(data);
-            data?.playerAnimator.SetBool(IsJabbing, false);
+            data?.PlayerAnimator?.SetBool(IsJabbing, false);
         }
     }
 }
