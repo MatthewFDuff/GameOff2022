@@ -12,11 +12,11 @@ namespace Core.Modules.Controls.PlayerStateMachine
             
             if (Input.GetKeyDown(data.controls.lightAttack))
             {
-                Debug.Log("Light attack");
+                data.machine.ChangeStateTo(data.LightAttackState);
             }
             else if(Input.GetKeyDown(data.controls.heavyAttack))
             {
-                Debug.Log("Heavy attack");
+                data.machine.ChangeStateTo(data.HeavyAttackState);
             }
         }
     }

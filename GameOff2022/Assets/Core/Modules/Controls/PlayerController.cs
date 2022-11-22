@@ -1,6 +1,4 @@
-﻿using System;
-using Core.Modules.Controls.PlayerStateMachine;
-using Core.Scripts;
+﻿using Core.Modules.Controls.PlayerStateMachine;
 using UnityEngine;
 
 namespace Core.Modules.Controls
@@ -14,6 +12,7 @@ namespace Core.Modules.Controls
         void Awake()
         {
             stateMachine = new PlayerStateMachine.PlayerStateMachine(data, data.DefaultState);
+            data.machine = stateMachine;
         }
 
         public void Update()
