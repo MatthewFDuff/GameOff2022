@@ -2967,34 +2967,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8368139698016279776, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0549108
-      objectReference: {fileID: 0}
-    - target: {fileID: 8368139698016279776, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
-      propertyPath: m_Size.y
-      value: 0.2975459
-      objectReference: {fileID: 0}
-    - target: {fileID: 8368139698016279776, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.057982385
-      objectReference: {fileID: 0}
-    - target: {fileID: 8368139698016279776, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.14877295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8368139698016279777, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8368139698016279779, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1051021610}
-    - target: {fileID: 8368139698016279780, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
-      propertyPath: data.DefaultState.speed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8368139698016279788, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3042,18 +3018,6 @@ PrefabInstance:
     - target: {fileID: 8368139698016279791, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8368139699111528925, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8368139699111528925, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8368139699111528927, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
