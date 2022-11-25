@@ -115,8 +115,19 @@ MonoBehaviour:
     transform: {fileID: 8368139698016279791}
     controls: {fileID: 11400000, guid: f2e5722652c001245ab1f425ccc943d6, type: 2}
     playerAnimator: {fileID: 8368139699111528926}
-    Speed: 5
     health: {fileID: 8368139698016279779}
+    DefaultState:
+      speed: 0
+    lightAttackStateState:
+      windupTime: 0
+      damage: 0
+      animationName: 
+      attackCollider: {fileID: 0}
+    heavyAttackStateState:
+      windupTime: 0
+      damage: 0
+      animationName: 
+      attackCollider: {fileID: 0}
 --- !u!1 &8368139699111528924
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +212,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &8368139699111528926
 Animator:
   serializedVersion: 4
