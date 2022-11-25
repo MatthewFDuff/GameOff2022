@@ -4,19 +4,19 @@
     {
         public PlayerState CurrentState { get; private set;}
         
-        PlayerStateMachineData data;
+        PlayerController controller;
 
-        public PlayerStateMachine(PlayerStateMachineData dataGiven, PlayerState startingState)
+        public PlayerStateMachine(PlayerController controller, PlayerState startingState)
         {
-            data = dataGiven;
+            this.controller = controller;
             ChangeStateTo(startingState);
         }
 
         public void ChangeStateTo(PlayerState newState)
         {
-            CurrentState?.OnStateExit(data);
+            CurrentState?.OnStateExit(controller);
             CurrentState = newState;
-            CurrentState.OnStateEnter(data);
+            CurrentState.OnStateEnter(controller);
         }
     }
 }

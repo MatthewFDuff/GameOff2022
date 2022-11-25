@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Core.Modules.Controls.PlayerStateMachine
 {
+    [Serializable]
     public class MovementState : PlayerState
     {
+        public float speed;
         private static readonly int IsWalking = Animator.StringToHash("IsWalking");
 
-        public override void OnUpdate(PlayerStateMachineData data = null)
+        public override void OnUpdate(PlayerController controller)
         {
-            if (data is null)
+            if (controller.data is null)
             {
                 Debug.LogError("Movement State needs data");
                 return;
@@ -16,15 +19,14 @@ namespace Core.Modules.Controls.PlayerStateMachine
             var horizontalMovement = Input.GetAxis("Horizontal");
             var verticalMovement = Input.GetAxis("Vertical");
 
-            var effectiveSpeed = data.Speed * Time.deltaTime;
+            var effectiveSpeed = speed * Time.deltaTime;
             var movementVec = new Vector3(horizontalMovement, verticalMovement, 0);
             if (movementVec.magnitude > 1) movementVec = movementVec.normalized;
-
-
-            data.PlayerAnimator?.SetBool(IsWalking, movementVec.magnitude > 0);
+            
+            controller.data.PlayerAnimator?.SetBool(IsWalking, movementVec.magnitude > 0);
             
             
-            data.transform.position += movementVec * effectiveSpeed;
+            controller.data.transform.position += movementVec * effectiveSpeed;
         }
     }
 }

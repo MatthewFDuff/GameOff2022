@@ -2,14 +2,14 @@
 {
     public class DamagedState : PlayerState
     {
-        public override void OnStateEnter(PlayerStateMachineData data = null)
+        public override void OnStateEnter(PlayerController controller)
         {
-            base.OnStateEnter(data);
+            base.OnStateEnter(controller);
         }
 
-        public override void OnStateExit(PlayerStateMachineData data = null)
+        public override void OnStateExit(PlayerController controller)
         {
-            base.OnStateExit(data);
+            base.OnStateExit(controller);
         }
     }
 }

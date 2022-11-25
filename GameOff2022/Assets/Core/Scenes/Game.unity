@@ -1167,7 +1167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180248870785988273, guid: b0d9c956ff383374dbe4f98104c54eda, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.68
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 1180248870785988273, guid: b0d9c956ff383374dbe4f98104c54eda, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2806,7 +2806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6753836821511759834, guid: 55b948db81848354a9143b22a45399d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000023841858
+      value: -0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 6753836821511759834, guid: 55b948db81848354a9143b22a45399d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2863,7 +2863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7881216680582204614, guid: 92036f25be77a0244a845fec03e33c73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000023841858
+      value: -0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 7881216680582204614, guid: 92036f25be77a0244a845fec03e33c73, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2983,10 +2983,18 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.85122705
       objectReference: {fileID: 0}
+    - target: {fileID: 8368139698016279777, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8368139698016279779, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1051021610}
+    - target: {fileID: 8368139698016279780, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
+      propertyPath: data.DefaultState.speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8368139698016279788, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
       propertyPath: m_Name
       value: Player

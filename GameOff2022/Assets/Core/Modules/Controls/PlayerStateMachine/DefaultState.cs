@@ -1,22 +1,24 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Core.Modules.Controls.PlayerStateMachine
 {
+    [Serializable]
     public class DefaultState : MovementState
     {
-        public override void OnUpdate(PlayerStateMachineData data = null)
+        public override void OnUpdate(PlayerController controller)
         {
-            if (data == null) return;
+            if (controller.data == null) return;
 
-            base.OnUpdate(data);
+            base.OnUpdate(controller);
             
-            if (Input.GetKeyDown(data.controls.lightAttack))
+            if (Input.GetKeyDown(controller.data.controls.lightAttack))
             {
-                data.machine.ChangeStateTo(data.LightAttackState);
+                controller.data.machine.ChangeStateTo(controller.data.lightAttackStateState);
             }
-            else if(Input.GetKeyDown(data.controls.heavyAttack))
+            else if(Input.GetKeyDown(controller.data.controls.heavyAttack))
             {
-                data.machine.ChangeStateTo(data.HeavyAttackState);
+                controller.data.machine.ChangeStateTo(controller.data.heavyAttackStateState);
             }
         }
     }

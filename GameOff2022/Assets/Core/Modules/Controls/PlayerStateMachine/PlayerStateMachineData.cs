@@ -13,16 +13,15 @@ namespace Core.Modules.Controls.PlayerStateMachine
         public Controls controls;
         public PlayerStateMachine machine;
         [SerializeField] Animator playerAnimator;
+        public PlayerHealthScript health;
 
         public Animator PlayerAnimator => playerAnimator != null ? playerAnimator : null;
 
-        [Header("Knobs")]
-        public float Speed;
+        [Header("States")]
 
-        public PlayerHealthScript health;
-        public DefaultState DefaultState = new DefaultState();
-        public LightAttackState LightAttackState = new LightAttackState();
-        public HeavyAttackState HeavyAttackState = new HeavyAttackState();
-        
+        public DefaultState DefaultState;
+        public WindUpAttackState lightAttackStateState;
+        public WindUpAttackState heavyAttackStateState;
+
     }
 }
