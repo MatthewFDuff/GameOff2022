@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Core/Scenes/Menu.unity
     guid: 2ffc21a1b473a56469a809b8634f09ca
   - enabled: 1
-    path: Assets/Core/Scenes/Game.unity
+    path: Assets/Core/Scenes/DEPRECATED.unity
     guid: 86526f5e56985ad40ad5f58ddc171da2
   - enabled: 1
     path: Assets/Core/Scenes/Init.unity
