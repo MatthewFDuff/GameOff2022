@@ -23,13 +23,13 @@ namespace Core.Scripts
         {
             if (transform.position.x > target.position.x)
             {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 var moveTowards = target.position + new Vector3(targetOffset, 0, 0);
                 MoveTowards(moveTowards);  
             }
             else
             {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                transform.rotation = Quaternion.Euler(0, 180, 0);
                 var moveTowards = target.position + new Vector3(-targetOffset, 0, 0);
                 MoveTowards(moveTowards);
             }
