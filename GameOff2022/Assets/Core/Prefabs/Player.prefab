@@ -239,12 +239,12 @@ MonoBehaviour:
     lightAttackStateState:
       windupTime: 0.2
       damage: 2
-      animationName: Jab
+      animationName: IsJabbing
       attackCollider: {fileID: 563527289}
     heavyAttackStateState:
       windupTime: 1
       damage: 6
-      animationName: Punch
+      animationName: IsPunching
       attackCollider: {fileID: 1434082298}
 --- !u!1 &8368139699111528924
 GameObject:
