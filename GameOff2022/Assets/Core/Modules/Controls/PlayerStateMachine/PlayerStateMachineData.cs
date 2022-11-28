@@ -13,6 +13,7 @@ namespace Core.Modules.Controls.PlayerStateMachine
         public Controls controls;
         public PlayerStateMachine machine;
         [SerializeField] Animator playerAnimator;
+        public Rigidbody2D playerBody;
         public PlayerHealthScript health;
 
         public Animator PlayerAnimator => playerAnimator != null ? playerAnimator : null;

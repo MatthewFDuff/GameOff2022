@@ -5,13 +5,13 @@ namespace Core.Scripts
 {
     public class BasicEnemyPunch : EnemyAttack
     {
-        [SerializeField] Collider2D punchCollider;
         [SerializeField] float windup;
-
         [SerializeField] float damageWindowInSeconds;
-        
+        bool isAttacking = false;
         public override void StartAttack()
         {
+            if (isAttacking) return;
+            isAttacking = true;
             Invoke(nameof(TriggerStart), windup);
         }
 
@@ -29,12 +29,13 @@ namespace Core.Scripts
 
         public override void EndAttack()
         {
+            isAttacking = false;
             attackEnded?.Invoke();
         }
 
-        public void OnCollisionEnter2D(Collision2D other)
+        public void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.gameObject.TryGetComponent<IDamageable>(out var damageable)) return;
+            if (!other.TryGetComponent<IDamageable>(out var damageable)) return;
             
             Attack(damageable);
             EndAttack();

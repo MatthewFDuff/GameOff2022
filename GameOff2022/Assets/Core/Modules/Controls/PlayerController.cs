@@ -1,4 +1,5 @@
-﻿using Core.Modules.Controls.PlayerStateMachine;
+﻿using System;
+using Core.Modules.Controls.PlayerStateMachine;
 using UnityEngine;
 
 namespace Core.Modules.Controls
@@ -18,6 +19,11 @@ namespace Core.Modules.Controls
         public void Update()
         {
             stateMachine.CurrentState.OnUpdate(this);
+        }
+
+        public void FixedUpdate()
+        {
+            stateMachine.CurrentState.OnFixedUpdate(this);
         }
     }
 }
