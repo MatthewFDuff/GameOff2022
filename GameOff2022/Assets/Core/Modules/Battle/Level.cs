@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core.Modules
 {
-    [CreateAssetMenu(fileName = "newIngredient", menuName = "Scriptables/Level", order = 0)]
+    [CreateAssetMenu(fileName = "newLevel", menuName = "Scriptables/Level", order = 0)]
     public class Level : ScriptableObject
     {
         [SerializeField] float durationInSeconds;  

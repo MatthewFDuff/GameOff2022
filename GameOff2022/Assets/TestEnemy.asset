@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6507ceb82e174adbb9b93f10fc9938ab, type: 3}
-  m_Name: newIngredient
+  m_Script: {fileID: 11500000, guid: c38074a227cf46a0a46f30093b7c6631, type: 3}
+  m_Name: TestEnemy
   m_EditorClassIdentifier: 
-  durationInSeconds: 0
-  customers: []
+  enemyPrefab: {fileID: 0}
+  maxHealth: 10

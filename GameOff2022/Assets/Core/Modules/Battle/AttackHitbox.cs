@@ -15,10 +15,9 @@ namespace Core.Modules.Battle
             if (!hitbox.enabled) return;
             if (!other.TryGetComponent<IDamageable>(out var damageable)) return;
             
-            Debug.Log("Attacking " + other.gameObject);
             damageable.Damage(damage);
             var direction = (other.transform.position - transform.position).normalized ;
-            other.attachedRigidbody.AddRelativeForce(direction * impactForce, ForceMode2D.Impulse);
+            other.attachedRigidbody.AddForce(direction * impactForce, ForceMode2D.Impulse);
         }
     }
 }

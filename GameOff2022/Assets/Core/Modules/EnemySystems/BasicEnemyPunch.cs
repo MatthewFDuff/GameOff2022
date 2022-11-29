@@ -7,7 +7,9 @@ namespace Core.Scripts
     {
         [SerializeField] float windup;
         [SerializeField] float damageWindowInSeconds;
+        [SerializeField] float impactForce;
         bool isAttacking = false;
+        Timer timer;
         public override void StartAttack()
         {
             if (isAttacking) return;
@@ -24,6 +26,7 @@ namespace Core.Scripts
         public override void Attack(IDamageable damageable)
         {
             damageable.Damage(damage);
+
             EndAttack();
         }
 
@@ -36,6 +39,9 @@ namespace Core.Scripts
         public void OnTriggerEnter2D(Collider2D other)
         {
             if (!other.TryGetComponent<IDamageable>(out var damageable)) return;
+            Debug.Log("Attacking " + other.gameObject);
+            var direction = (other.transform.position - transform.position).normalized ;
+            other.attachedRigidbody.AddForce(direction * impactForce, ForceMode2D.Impulse);
             
             Attack(damageable);
             EndAttack();

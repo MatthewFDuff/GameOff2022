@@ -1954,6 +1954,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b77811843c40c6ad2ed19b3a959482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 11400000, guid: ed8535f29fa9c9640be236a39fc51d58, type: 2}
+  animator: {fileID: 7970088959426024197}
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7970088959426024196}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7970088959426024195}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1124119637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,6 +3473,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+--- !u!1 &7970088959426024195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7970088959567332089, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+  m_PrefabInstance: {fileID: 7970088959426024194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7970088959426024196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7970088958467617258, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+  m_PrefabInstance: {fileID: 7970088959426024194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068188067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d1db5ea9114bb2be52006606445f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &7970088959426024197 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 147471432716203353, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+  m_PrefabInstance: {fileID: 7970088959426024194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8368139698201536472
 PrefabInstance:
   m_ObjectHideFlags: 0
