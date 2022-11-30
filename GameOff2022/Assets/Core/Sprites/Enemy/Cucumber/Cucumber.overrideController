@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Cucumber
+  m_Controller: {fileID: 9100000, guid: 361c1854e406a8642b141420206e03e6, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 027a4b095d438094a8b41370a7913a38, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4d7ed062a221ce346bde5aa2fa77a91d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: faad43836f7a3204790df69df49aa66b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4b6b74d3400ef0943a96d71a538dc587, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 63190d4b57eaaef48a8af488a6cbd9a7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 95f04cadff0e76d4fb04148550d595cc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f01a36e4546a35f41b468f4ff2d6c382, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4a68575db6771364bb98b879c59dcd63, type: 2}
