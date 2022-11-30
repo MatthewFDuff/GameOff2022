@@ -10,6 +10,7 @@ namespace Core.Modules.Recipes
     {
         [SerializeField] Ingredient[] ingredients;
         [SerializeField] Enemy[] enemies;
+        [SerializeField] 
 
         public Enemy[] GetEnemies() => enemies;
         public Ingredient[] GetIngredients() => ingredients;
@@ -18,5 +19,5 @@ namespace Core.Modules.Recipes
         {
             return ingredients.All(ingredientsProvided.Contains);
         }
-    }
+    } 
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Core.Scripts
@@ -9,6 +10,11 @@ namespace Core.Scripts
         [SerializeField] Animator animator;
         public UnityEvent death;
         int health;
+
+        public void Start()
+        {
+            if(enemy != null) Initialize(enemy);
+        }
 
         public void Initialize(Enemy enemyGiven)
         {

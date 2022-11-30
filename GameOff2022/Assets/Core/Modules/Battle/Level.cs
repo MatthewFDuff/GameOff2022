@@ -1,4 +1,4 @@
-﻿using Core.Modules.Battle;
+﻿using Core.Modules.Recipes;
 using UnityEngine;
 
 namespace Core.Modules
@@ -7,9 +7,9 @@ namespace Core.Modules
     public class Level : ScriptableObject
     {
         [SerializeField] float durationInSeconds;  
-        [SerializeField] Customer[] customers;
+        [SerializeField] Recipe[] recipes;
 
         public float GetDuration() => durationInSeconds;
-        public Customer[] GetCustomers() => customers;
+        public Recipe GetRecipe(int i) => recipes[i];
     }
 }
