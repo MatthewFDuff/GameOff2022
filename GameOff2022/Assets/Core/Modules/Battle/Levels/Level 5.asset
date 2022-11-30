@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6507ceb82e174adbb9b93f10fc9938ab, type: 3}
   m_Name: Level 5
   m_EditorClassIdentifier: 
-  durationInSeconds: 0
-  customers: []
+  durationInSeconds: 60
+  recipes:
+  - {fileID: 11400000, guid: d2bdfe6e4f021514fb12e335bd43138d, type: 2}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38074a227cf46a0a46f30093b7c6631, type: 3}
   m_Name: TestEnemy
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 6288565445818779688, guid: 6a0c64b709ae2914589780e6a1695823, type: 3}
   maxHealth: 10

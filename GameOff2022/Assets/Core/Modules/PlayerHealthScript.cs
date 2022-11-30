@@ -1,5 +1,6 @@
 using Core.Scripts;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealthScript : MonoBehaviour, IDamageable
 {
@@ -8,6 +9,8 @@ public class PlayerHealthScript : MonoBehaviour, IDamageable
     public int PlayerCurrentHealth;
 
     public PlayerHealthBar healthBar;
+
+    public UnityEvent death;
     
     public void Start()
     {
@@ -15,17 +18,12 @@ public class PlayerHealthScript : MonoBehaviour, IDamageable
         healthBar.SetMaxHealth(PlayerMaxHealth);
     }
 
-    public void SetMaxHealth(int health)
-    {
-        //slider.maxValue = health;
-       // slider.value = health;
-    }
-    
-     void TakeDamage(int damage)
+    void TakeDamage(int damage)
     {
         PlayerCurrentHealth -= damage;
 
         healthBar.SetHealth(PlayerCurrentHealth);
+        if(PlayerCurrentHealth >= 0) death?.Invoke();
     }
 
     public void Damage(int amount)

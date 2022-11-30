@@ -9,7 +9,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7970088958467617249, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Onion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970088958467617252, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: m_Mass
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970088958467617252, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: m_LinearDrag
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970088958467617253, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7970088958467617255, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_RootOrder
@@ -54,6 +66,10 @@ PrefabInstance:
     - target: {fileID: 7970088958467617255, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970088958467617258, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: tolerance
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}

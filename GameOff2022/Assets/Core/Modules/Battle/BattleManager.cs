@@ -16,10 +16,21 @@ namespace Core.Modules.Battle
 
         public UnityEvent<float> timerTick;
         public UnityEvent<Recipe> recipeAdded;
+        public UnityEvent onGameOver;
+        public UnityEvent onLevelComplete;
+        
 
-        int activeEnemies;
+        List<RuntimeEnemy> activeEnemies;
         int recipesCompleted = 0;
         Timer levelTimer;
+        GameManager manager;
+
+        void Awake()
+        {
+            activeEnemies = new List<RuntimeEnemy>();
+            manager = FindObjectOfType<GameManager>();
+            currentLevel = manager.GetNextLevel();
+        }
 
 
         void Start()
@@ -45,12 +56,26 @@ namespace Core.Modules.Battle
 
         void SpawnNextRecipe()
         {
-            SpawnRecipe(currentLevel.GetRecipe(recipesCompleted));
+            var nextRecipe = currentLevel.GetRecipe(recipesCompleted);
+            if (nextRecipe == null)
+            {
+                LevelComplete();
+            }
+            else
+            {
+                SpawnRecipe(currentLevel.GetRecipe(recipesCompleted));
+            }
         }
 
-        public void StopBattle()
+        public void LevelComplete()
         {
-            // Don't know the logic for this quite yet
+            manager.CompleteLevel();
+            onLevelComplete?.Invoke();
+        }
+
+        public void GameOver()
+        {
+            onGameOver?.Invoke();
         }
         
 
@@ -63,28 +88,32 @@ namespace Core.Modules.Battle
             }
         }
 
-        public void ReportEnemyDefeated()
+        public void RemoveEnemy(RuntimeEnemy enemy)
         {
-            activeEnemies--;
-            if (activeEnemies != 0) return;
-
+            activeEnemies.Remove(enemy);
+            if (activeEnemies.Count != 0) return;
+            
             recipesCompleted++;
             SpawnNextRecipe();
         }
 
-        void SpawnEnemyAt(Enemy enemy, Transform spawnPoint)
+        static void SpawnEnemyAt(Enemy enemy, Transform spawnPoint)
         {
             Instantiate(enemy.EnemyPrefab, spawnPoint.position, Quaternion.identity);
-            activeEnemies++;
         }
 
         void StartLevelTimer()
         {
             levelTimer?.Stop();
             levelTimer = new Timer(this, currentLevel.GetDuration(), 0.1f);
-            levelTimer.OnCompleted += StopBattle;
+            levelTimer.OnCompleted += GameOver;
             levelTimer.OnTick += (elapsedTime) => timerTick?.Invoke(currentLevel.GetDuration() - elapsedTime);
             levelTimer.Start();
+        }
+
+        public void AddEnemy(RuntimeEnemy runtimeEnemy)
+        {
+            activeEnemies.Add(runtimeEnemy);
         }
     }
 }
