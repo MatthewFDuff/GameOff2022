@@ -12,6 +12,7 @@ namespace Core.Modules.Battle
 
         void OnTriggerEnter2D(Collider2D other)
         {
+            Debug.Log("Enemy Hit");
             if (!hitbox.enabled) return;
             if (!other.TryGetComponent<IDamageable>(out var damageable)) return;
             

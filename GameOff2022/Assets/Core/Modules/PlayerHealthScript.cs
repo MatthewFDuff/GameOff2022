@@ -23,7 +23,7 @@ public class PlayerHealthScript : MonoBehaviour, IDamageable
         PlayerCurrentHealth -= damage;
 
         healthBar.SetHealth(PlayerCurrentHealth);
-        if(PlayerCurrentHealth >= 0) death?.Invoke();
+        if(PlayerCurrentHealth <= 0) death?.Invoke();
     }
 
     public void Damage(int amount)

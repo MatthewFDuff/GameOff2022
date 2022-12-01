@@ -48,7 +48,7 @@ namespace Core.Scripts
 
         bool IsInRange(Vector3 pointToMoveTowards)
         {
-            Debug.Log(Vector3.Distance(transform.position, pointToMoveTowards));
+            //Debug.Log(Vector3.Distance(transform.position, pointToMoveTowards));
             return Vector3.Distance(transform.position, pointToMoveTowards) <= tolerance;
         }
     }

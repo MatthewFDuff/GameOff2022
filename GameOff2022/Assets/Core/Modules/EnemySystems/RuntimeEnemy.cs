@@ -33,7 +33,9 @@ namespace Core.Scripts
         public void Damage(int amount)
         {
             // More robust logic to come
+            animator.SetBool("IsHurt", true);
             health -= amount;
+            animator.SetBool("IsHurt", true);
             if(health <= 0) death?.Invoke();
             manager.RemoveEnemy(this);
         }

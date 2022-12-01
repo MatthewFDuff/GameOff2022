@@ -77,7 +77,6 @@ namespace Core.Modules.Battle
         {
             onGameOver?.Invoke();
         }
-        
 
         public void SpawnRecipe(Recipe recipe)
         {
