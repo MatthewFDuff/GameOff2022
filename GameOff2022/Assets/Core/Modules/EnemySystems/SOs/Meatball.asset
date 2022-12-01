@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Meatball
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7388735688698532116, guid: 39c21a74e4166c74490267e6875dc91a, type: 3}
-  maxHealth: 10
+  maxHealth: 25
   scoreValue: 7500

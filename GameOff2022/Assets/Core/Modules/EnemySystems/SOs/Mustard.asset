@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Mustard
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3397466469186889537, guid: 14907a070ca184740822e93115a978ce, type: 3}
-  maxHealth: 5
+  maxHealth: 7
   scoreValue: 500

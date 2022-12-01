@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Hotdog
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8460117200414181290, guid: d2ae59a8b018fff45a485c897e35ef2a, type: 3}
-  maxHealth: 10
+  maxHealth: 35
   scoreValue: 250000

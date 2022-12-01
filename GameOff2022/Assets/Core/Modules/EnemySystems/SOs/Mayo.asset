@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Mayo
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6879531263979405880, guid: 2d11fce2fdcd05e4d8927f1d0af7096e, type: 3}
-  maxHealth: 5
-  scoreValue: 500
+  maxHealth: 7
+  scoreValue: 760

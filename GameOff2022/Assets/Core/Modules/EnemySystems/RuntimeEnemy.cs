@@ -15,6 +15,7 @@ namespace Core.Scripts
         private static readonly int IsHurt = Animator.StringToHash("IsHurt");
 
         public static event Action<int> OnEnemyDeath; 
+        public static event Action OnEnemyNotHurt; 
 
         void Awake()
         {
@@ -38,8 +39,18 @@ namespace Core.Scripts
             // More robust logic to come
             animator.SetBool(IsHurt, true);
             health -= amount;
-            if(health <= 0) Die();
-            
+            if (health <= 0)
+            {
+                Die();
+            }
+            else
+            {
+                Invoke(nameof(ResetAnimation), 0.5f);
+            }
+        }
+
+        private void ResetAnimation()
+        {
             animator.SetBool(IsHurt, false);
         }
 
@@ -52,7 +63,7 @@ namespace Core.Scripts
 
         public void Kill()
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
         }
     }
 }

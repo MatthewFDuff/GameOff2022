@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Bacon
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4903017264851694552, guid: dcaadfc3568e6a94886ceda21340b289, type: 3}
-  maxHealth: 10
-  scoreValue: 10000
+  maxHealth: 15
+  scoreValue: 15000

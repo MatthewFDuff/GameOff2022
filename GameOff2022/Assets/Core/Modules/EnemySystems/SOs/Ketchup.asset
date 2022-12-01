@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Ketchup
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6288565445818779688, guid: 6a0c64b709ae2914589780e6a1695823, type: 3}
-  maxHealth: 5
-  scoreValue: 500
+  maxHealth: 7
+  scoreValue: 750

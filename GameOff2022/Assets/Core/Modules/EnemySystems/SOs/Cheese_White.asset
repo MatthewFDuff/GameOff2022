@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cheese_White
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7302532372926275378, guid: e1d1eb3a7cdbf8d448a9275d1db78a30, type: 3}
-  maxHealth: 5
-  scoreValue: 250
+  maxHealth: 7
+  scoreValue: 750
