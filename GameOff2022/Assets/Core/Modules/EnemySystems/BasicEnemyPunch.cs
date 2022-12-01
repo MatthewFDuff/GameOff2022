@@ -10,10 +10,17 @@ namespace Core.Scripts
         [SerializeField] float impactForce;
         bool isAttacking = false;
         Timer timer;
+
+        [SerializeField]
+        private Animator _animator;
+        private static readonly int IsPunching = Animator.StringToHash("IsPunching");
+
         public override void StartAttack()
         {
             if (isAttacking) return;
             isAttacking = true;
+            _animator.SetBool(IsPunching, true);
+
             Invoke(nameof(TriggerStart), windup);
         }
 
@@ -33,6 +40,7 @@ namespace Core.Scripts
         public override void EndAttack()
         {
             isAttacking = false;
+            _animator.SetBool(IsPunching, false);
             attackEnded?.Invoke();
         }
 

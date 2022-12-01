@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Core.Scripts;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Core.Modules.Recipes
 {
@@ -7,5 +9,6 @@ namespace Core.Modules.Recipes
     {
         [SerializeField] Sprite Sprite;
         public Sprite sprite => Sprite;
+        [SerializeField] private Enemy enemy;
     }
 }
