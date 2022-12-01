@@ -1,5 +1,4 @@
-﻿using System;
-using Core.Modules.Controls.PlayerStateMachine;
+﻿using Core.Modules.Controls.PlayerStateMachine;
 using UnityEngine;
 
 namespace Core.Modules.Controls

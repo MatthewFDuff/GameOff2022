@@ -1,6 +1,5 @@
 ﻿using Core.Scripts;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Core.Modules.Recipes
 {

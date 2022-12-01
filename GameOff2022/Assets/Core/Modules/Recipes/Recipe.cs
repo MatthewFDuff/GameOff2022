@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Core.Scripts;
+﻿using Core.Scripts;
 using UnityEngine;
 
 namespace Core.Modules.Recipes

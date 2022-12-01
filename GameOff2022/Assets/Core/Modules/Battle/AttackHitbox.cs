@@ -1,5 +1,4 @@
-﻿using System;
-using Core.Scripts;
+﻿using Core.Scripts;
 using UnityEngine;
 
 namespace Core.Modules.Battle

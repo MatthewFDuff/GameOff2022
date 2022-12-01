@@ -17,7 +17,7 @@ namespace Core.Modules.UI.Views
             base.Initialize();
             
             playButton.AddOnClickListener(Play);
-            settingsButton.AddOnClickListener(Settings);
+            // settingsButton.AddOnClickListener(Settings);
             quitButton.AddOnClickListener(Quit);
         }
 

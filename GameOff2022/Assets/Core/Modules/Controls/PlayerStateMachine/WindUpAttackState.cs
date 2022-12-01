@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Core.Modules.Controls.PlayerStateMachine
 {
@@ -12,6 +13,7 @@ namespace Core.Modules.Controls.PlayerStateMachine
         [SerializeField] string animationName;
         [SerializeField] Collider2D attackCollider;
         [SerializeField] SpriteRenderer debugVisualizer;
+        [SerializeField] private AudioSource sfx;
         private int animation => Animator.StringToHash(animationName);
         Timer timer;
         PlayerController controller;
@@ -32,6 +34,7 @@ namespace Core.Modules.Controls.PlayerStateMachine
         {
             attackCollider.enabled = true;
             debugVisualizer.enabled = true;
+            sfx.Play();
             
             timer = new Timer(controller, attackLength);
             timer.OnCompleted += () => controller.data.machine.ChangeStateTo(controller.data.DefaultState);;

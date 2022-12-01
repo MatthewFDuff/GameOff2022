@@ -18,7 +18,7 @@ namespace Core.Modules.Battle
         public static event Action<Recipe> OnRecipeAdded;
         public UnityEvent onGameOver;
         public UnityEvent onLevelComplete;
-        
+        public UnityEvent OnGameCompleted;
 
         List<RuntimeEnemy> activeEnemies;
         int recipesCompleted = 0;
@@ -32,15 +32,17 @@ namespace Core.Modules.Battle
             currentLevel = manager.GetNextLevel();
         }
 
-
         void Start()
         {
             if (!startBattleOnStart) return;
             if (currentLevel is null)
             {
                 Debug.LogWarning("No Level set", this);
+                OnGameCompleted?.Invoke();
                 return;
             }
+            
+            FindObjectOfType<LevelUI>().UpdateLevelInfo(currentLevel);
             StartBattle();
         }
 

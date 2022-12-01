@@ -1,5 +1,4 @@
-﻿using System;
-using Core.Modules.Controls;
+﻿using Core.Modules.Controls;
 using UnityEngine;
 using UnityEngine.Events;
 

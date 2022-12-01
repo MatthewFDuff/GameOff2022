@@ -1,4 +1,3 @@
-using System;
 using Core.Modules.Utility.Singletons;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,6 +21,11 @@ namespace Core.Modules
         public void LoadGameScene()
         {
             SceneManager.LoadScene("Game");
+        }
+        
+        public void LoadMainMenu()
+        {
+            SceneManager.LoadScene("Menu");
         }
 
         public Level GetNextLevel()
