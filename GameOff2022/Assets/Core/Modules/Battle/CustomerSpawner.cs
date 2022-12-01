@@ -19,7 +19,7 @@ namespace Core.Modules.Battle
         // Start is called before the first frame update
         void Start()
         {
-            Line.Add(Instantiate(customerObj.customerGO, gameObject.transform.position, Quaternion.identity));
+            Line.Add(Instantiate(customerObj.customerGO, gameObject.transform.position, Quaternion.identity, transform));
         }
 
         // Update is called once per frame
@@ -27,8 +27,6 @@ namespace Core.Modules.Battle
         {
             MoveCustomer();
         }
-
-
 
         private void MoveCustomer()
         {
