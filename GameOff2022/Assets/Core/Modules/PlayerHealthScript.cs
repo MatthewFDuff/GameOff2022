@@ -23,6 +23,7 @@ public class PlayerHealthScript : MonoBehaviour, IDamageable
 
     void TakeDamage(int damage)
     {
+        Debug.Log("Player taking damage");
         _animator.SetBool(IsHurt, true);
         PlayerCurrentHealth -= damage;
         
