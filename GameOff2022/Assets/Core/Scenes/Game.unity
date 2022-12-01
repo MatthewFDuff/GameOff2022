@@ -4809,13 +4809,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1180248870785988273, guid: b0d9c956ff383374dbe4f98104c54eda, type: 3}
   m_PrefabInstance: {fileID: 1648690402}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!95 &1655507771 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8368139699111528926, guid: f827eea52a51d0b47a507b98f3719067, type: 3}
   m_PrefabInstance: {fileID: 8368139698201536472}
   m_PrefabAsset: {fileID: 0}
-=======
 --- !u!1 &1661769490 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6753836821511759832, guid: 55b948db81848354a9143b22a45399d2, type: 3}
@@ -4836,7 +4834,6 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 777518570}
   m_Damping: 0.5
   m_MaxWindowSize: -1
->>>>>>> Stashed changes
 --- !u!1001 &1819285446
 PrefabInstance:
   m_ObjectHideFlags: 0
