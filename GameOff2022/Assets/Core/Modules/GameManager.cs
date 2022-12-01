@@ -7,7 +7,7 @@ namespace Core.Modules
     public class GameManager : PersistentSingleton<GameManager>
     {
         [SerializeField] Level[] gameLevels;
-        int completedLevels = 0;
+        public int completedLevels = 0;
         
         public static void QuitGame()
         {

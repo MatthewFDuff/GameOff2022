@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970088958467617252, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_LinearDrag
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7970088958467617253, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_Enabled
@@ -70,6 +70,10 @@ PrefabInstance:
     - target: {fileID: 7970088958467617255, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970088958467617258, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: speed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8640686564752303532, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_Sprite

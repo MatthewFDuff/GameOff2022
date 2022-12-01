@@ -23,14 +23,21 @@ public class PlayerHealthScript : MonoBehaviour, IDamageable
 
     void TakeDamage(int damage)
     {
-        Debug.Log("Player taking damage");
         _animator.SetBool(IsHurt, true);
+        
+        GetComponent<AudioSource>().Play();
+        
         PlayerCurrentHealth -= damage;
         
 
         healthBar.SetHealth(PlayerCurrentHealth);
         if(PlayerCurrentHealth <= 0) death?.Invoke();
         
+        Invoke(nameof(StopHurting), 0.5f);
+    }
+
+    void StopHurting()
+    {
         _animator.SetBool(IsHurt, false);
     }
 

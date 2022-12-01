@@ -8,13 +8,17 @@ public class PressAnyKeyToContinue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (overrideToMainMenu)
         {
-            if (overrideToMainMenu)
+            if (Input.GetKey(KeyCode.Escape))
             {
                 FindObjectOfType<GameManager>()?.LoadMainMenu();
+                FindObjectOfType<GameManager>().completedLevels = 0;   
             }
-            else
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.Space))
             {
                 FindObjectOfType<GameManager>()?.LoadGameScene();
             }
