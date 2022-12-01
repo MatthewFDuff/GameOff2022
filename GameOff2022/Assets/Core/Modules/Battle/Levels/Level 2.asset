@@ -15,3 +15,4 @@ MonoBehaviour:
   durationInSeconds: 60
   recipes:
   - {fileID: 11400000, guid: f238ca4c97a0c554c917424a0f88b123, type: 2}
+  - {fileID: 11400000, guid: f238ca4c97a0c554c917424a0f88b123, type: 2}

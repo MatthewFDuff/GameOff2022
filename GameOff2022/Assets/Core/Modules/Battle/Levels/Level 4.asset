@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   durationInSeconds: 60
   recipes:
-  - {fileID: 11400000, guid: 4606b2a51a1dfc94bab5669112d89292, type: 2}
+  - {fileID: 11400000, guid: fcf20698deb271643a9b21f57a62a4cc, type: 2}

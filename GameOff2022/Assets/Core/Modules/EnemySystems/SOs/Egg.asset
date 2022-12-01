@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38074a227cf46a0a46f30093b7c6631, type: 3}
   m_Name: Egg
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
-  maxHealth: 0
-  scoreValue: 500
+  enemyPrefab: {fileID: 4722715362936193049, guid: 5fe7fe7115c76bd4cb652276e292b9b2, type: 3}
+  maxHealth: 15
+  scoreValue: 1500

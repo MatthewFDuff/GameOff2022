@@ -39,13 +39,14 @@ namespace Core.Scripts
             animator.SetBool(IsHurt, true);
             health -= amount;
             if(health <= 0) Die();
-            manager.RemoveEnemy(this);
+            
             animator.SetBool(IsHurt, false);
         }
 
         private void Die()
         {
             OnEnemyDeath?.Invoke(enemy.scoreValue); // Sorry Brad. Time is of the essence.
+            manager.RemoveEnemy(this);
             death?.Invoke(enemy);
         }
 

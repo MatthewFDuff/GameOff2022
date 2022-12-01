@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEditor.UI;
 using UnityEngine;
 
 namespace Core.Modules.Controls.PlayerStateMachine
