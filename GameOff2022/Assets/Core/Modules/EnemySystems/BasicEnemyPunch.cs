@@ -45,6 +45,7 @@ namespace Core.Scripts
 
         public void OnTriggerEnter2D(Collider2D other)
         {
+            Debug.Log("Triggered");
             if (!other.TryGetComponent<IDamageable>(out var damageable)) return;
             Debug.Log("Attacking " + other.gameObject);
             var direction = (other.transform.position - transform.position).normalized ;
