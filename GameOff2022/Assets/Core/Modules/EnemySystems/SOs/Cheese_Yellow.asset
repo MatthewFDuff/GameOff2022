@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1275acb9eb1408f8ed944c05395a72f, type: 3}
-  m_Name: TossedSalad
+  m_Script: {fileID: 11500000, guid: c38074a227cf46a0a46f30093b7c6631, type: 3}
+  m_Name: Cheese_Yellow
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: 855c525be77e68548b25d4d24311cea1, type: 3}
+  enemyPrefab: {fileID: 8390027161752287371, guid: 5227ff3d3cb66834d864b27e0103ef23, type: 3}
+  maxHealth: 5
