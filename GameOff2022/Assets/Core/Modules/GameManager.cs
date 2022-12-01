@@ -21,10 +21,14 @@ namespace Core.Modules
 
         public void LoadGameScene()
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("Game");
         }
 
-        public Level GetNextLevel() => gameLevels[completedLevels];
+        public Level GetNextLevel()
+        {
+            if (completedLevels >= gameLevels.Length) return null;
+            return gameLevels[completedLevels];
+        }
         public void CompleteLevel() => completedLevels++;
     }
 }

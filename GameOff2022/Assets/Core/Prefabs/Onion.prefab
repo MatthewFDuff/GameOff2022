@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 147471432716203353, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: fd57316e4c2a2b6488e7387a2ad1a1f4, type: 2}
     - target: {fileID: 7970088958467617249, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_Name
       value: Onion
@@ -71,5 +75,9 @@ PrefabInstance:
       propertyPath: tolerance
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 8640686564752303532, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -624437839, guid: bbbe4636e56a5c5458d09f0901c7b77c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}

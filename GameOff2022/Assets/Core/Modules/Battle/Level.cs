@@ -10,6 +10,11 @@ namespace Core.Modules
         [SerializeField] Recipe[] recipes;
 
         public float GetDuration() => durationInSeconds;
-        public Recipe GetRecipe(int i) => recipes[i];
+
+        public Recipe GetRecipe(int i)
+        {
+            if (i >= recipes.Length) return null;
+            return recipes[i];   
+        }
     }
 }

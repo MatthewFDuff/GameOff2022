@@ -70,6 +70,7 @@ namespace Core.Modules.Battle
         public void LevelComplete()
         {
             manager.CompleteLevel();
+            recipeAdded?.Invoke(currentLevel.GetRecipe(recipesCompleted));
             onLevelComplete?.Invoke();
         }
 

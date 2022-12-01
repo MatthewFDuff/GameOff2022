@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38074a227cf46a0a46f30093b7c6631, type: 3}
   m_Name: Bacon
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
-  maxHealth: 0
+  enemyPrefab: {fileID: 4903017264851694552, guid: dcaadfc3568e6a94886ceda21340b289, type: 3}
+  maxHealth: 10
+  scoreValue: 10000

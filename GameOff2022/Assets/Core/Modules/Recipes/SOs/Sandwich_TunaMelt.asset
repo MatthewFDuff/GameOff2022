@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d517c365bf6481da035e0df9d73c130, type: 3}
   m_Name: Sandwich_TunaMelt
   m_EditorClassIdentifier: 
-  enemies: []
+  enemies:
+  - {fileID: 11400000, guid: 45cdb6d2abf39fb499d6cb112ca03236, type: 2}
+  - {fileID: 11400000, guid: 620848cddc5c15144a460dc09cf4e6aa, type: 2}
+  - {fileID: 11400000, guid: 7663ec5c48c449a428a1ac359509236b, type: 2}
   pic: {fileID: 21300000, guid: 328e42c6d506c464697e306da857dbde, type: 3}
+  recipeName: Identity Theft Sandwich
+  recipeType: Tuna Melt Sandwich

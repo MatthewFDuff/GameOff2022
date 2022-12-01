@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d517c365bf6481da035e0df9d73c130, type: 3}
   m_Name: Sandwich_Egg
   m_EditorClassIdentifier: 
-  enemies: []
+  enemies:
+  - {fileID: 11400000, guid: 8b03da4e9135b464689121d232b5ce61, type: 2}
+  - {fileID: 11400000, guid: eaeee490aa5b85d4893ab6f8af3a4ed5, type: 2}
+  - {fileID: 11400000, guid: 55ebf6e7ff8f8df4481e399c4a92b4ba, type: 2}
   pic: {fileID: 21300000, guid: 9d887c849ba054e4eb1e6941b50b708f, type: 3}
+  recipeName: Egghead
+  recipeType: Egg Salad Sandwich

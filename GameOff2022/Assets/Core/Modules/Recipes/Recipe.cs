@@ -12,6 +12,9 @@ namespace Core.Modules.Recipes
         public Sprite pic;
 
         public Enemy[] GetEnemies() => enemies;
-        
+
+        public string recipeName;
+        public string recipeType;
+
     } 
 }

@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d517c365bf6481da035e0df9d73c130, type: 3}
   m_Name: Sandwich_Hotdog
   m_EditorClassIdentifier: 
-  enemies: []
+  enemies:
+  - {fileID: 11400000, guid: f6d992ef01dd66e44b4f005c18895e0a, type: 2}
+  - {fileID: 11400000, guid: 838bd2ad03b652c429336483728d67aa, type: 2}
+  - {fileID: 11400000, guid: 9057cac3d4f010d4293daff25147e970, type: 2}
   pic: {fileID: 21300000, guid: 41c6b5ac793021a4d82ac06f5af84543, type: 3}
+  recipeName: Hawtdog
+  recipeType: Hotdog Sandwich
