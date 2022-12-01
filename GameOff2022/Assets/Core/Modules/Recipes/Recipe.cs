@@ -15,6 +15,5 @@ namespace Core.Modules.Recipes
 
         public string recipeName;
         public string recipeType;
-
     } 
 }

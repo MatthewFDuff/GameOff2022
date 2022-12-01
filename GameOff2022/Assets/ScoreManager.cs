@@ -1,5 +1,6 @@
 using System;
 using Core.Modules.Utility.Singletons;
+using Core.Scripts;
 using UnityEngine;
 
 public class ScoreManager : PersistentSingleton<ScoreManager>
@@ -8,7 +9,12 @@ public class ScoreManager : PersistentSingleton<ScoreManager>
     
     public int CurrentScore => playerScore;
 
-    public event Action<int> OnScoreUpdated; 
+    public static event Action<int> OnScoreUpdated;
+
+    protected override void Awake()
+    {
+        RuntimeEnemy.OnEnemyDeath += AddToScore;
+    }
 
     private void Start()
     {
@@ -17,7 +23,7 @@ public class ScoreManager : PersistentSingleton<ScoreManager>
     
     public void AddToScore(int valueToAdd)
     {
-        playerScore = valueToAdd;
+        playerScore += valueToAdd;
         
         OnScoreUpdated?.Invoke(playerScore);
     }

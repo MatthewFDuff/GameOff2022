@@ -11,6 +11,6 @@ namespace Core.Scripts
         
         [SerializeField] GameObject enemyPrefab;
         [SerializeField] int maxHealth;
-        [SerializeField] private int scoreValue = 250;
+        [SerializeField] public int scoreValue = 250;
     }
 }

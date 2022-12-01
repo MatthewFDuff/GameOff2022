@@ -15,7 +15,7 @@ namespace Core.Modules.Battle
         [SerializeField] Level currentLevel;
 
         public UnityEvent<float> timerTick;
-        public UnityEvent<Recipe> recipeAdded;
+        public static event Action<Recipe> OnRecipeAdded;
         public UnityEvent onGameOver;
         public UnityEvent onLevelComplete;
         
@@ -46,6 +46,8 @@ namespace Core.Modules.Battle
 
         public void SetLevel(Level newLevel) => currentLevel = newLevel;
 
+        public Recipe CurrentRecipe;
+
         public void StartBattle()
         {
             recipesCompleted = 0;
@@ -69,8 +71,8 @@ namespace Core.Modules.Battle
 
         public void LevelComplete()
         {
+            OnRecipeAdded?.Invoke(currentLevel.GetRecipe(recipesCompleted));
             manager.CompleteLevel();
-            recipeAdded?.Invoke(currentLevel.GetRecipe(recipesCompleted));
             onLevelComplete?.Invoke();
         }
 
@@ -81,6 +83,7 @@ namespace Core.Modules.Battle
 
         public void SpawnRecipe(Recipe recipe)
         {
+            CurrentRecipe = recipe;
             var bucketOfSpawns = new Bucket<Transform>(new List<Transform>(enemySpawnLocations));
             foreach (var enemy in recipe.GetEnemies())
             {

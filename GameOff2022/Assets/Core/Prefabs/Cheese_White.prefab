@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 4fdc93e7ce9f32b4e80411d73a494fbe, type: 2}
+    - target: {fileID: 2787830136149089613, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 726c6daf880888d4e950e3c6082b7de6, type: 2}
     - target: {fileID: 7970088958467617249, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_Name
       value: Cheese_White

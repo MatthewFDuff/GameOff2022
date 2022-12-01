@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 0fb933bc0bb2ab5469cc6eb961740803, type: 2}
+    - target: {fileID: 2787830136149089613, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f83a71f26b46384e9ca29db4c92e224, type: 2}
     - target: {fileID: 7970088958467617249, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_Name
       value: Meatball

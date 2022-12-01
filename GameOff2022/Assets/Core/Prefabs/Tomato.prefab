@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 3768ff6e04327d54da52403149f9ee50, type: 2}
+    - target: {fileID: 2787830136149089613, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e4de8f2e4edfcf49abb0407e372145c, type: 2}
     - target: {fileID: 7970088958467617249, guid: 2dafc0fd6ec2067439f2492f40deab26, type: 3}
       propertyPath: m_Name
       value: Tomato
